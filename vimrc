@@ -1,3 +1,4 @@
+" pathogen
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -18,10 +19,11 @@ set cm=blowfish
 
 autocmd BufWritePre * :%s/\s\+$//e
 
-colorscheme molokai
-
 " Ack (the_silver_searcher / ag)
 let g:ackprg="ag"
+
+" colors
+colorscheme molokai
 
 " fzf
 set rtp+=~/.fzf
