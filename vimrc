@@ -16,6 +16,8 @@ set cm=blowfish
 
 autocmd BufWritePre * :%s/\s\+$//e
 
+colorscheme molokai
+
 " Ack (the_silver_searcher / ag)
 let g:ackprg="ag"
 
