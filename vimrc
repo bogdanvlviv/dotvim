@@ -12,6 +12,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+set showtabline=2
+
 set cm=blowfish
 
 autocmd BufWritePre * :%s/\s\+$//e
