@@ -5,13 +5,15 @@ filetype plugin indent on
 
 
 
-set number
-
 set colorcolumn=81
 
-set tabstop=2
-set shiftwidth=2
+set incsearch
+
+set number
+
 set expandtab
+set shiftwidth=2
+set tabstop=2
 
 set showtabline=2
 
