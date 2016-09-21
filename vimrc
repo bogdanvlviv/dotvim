@@ -25,7 +25,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 let g:ackprg="ag"
 
 " colors
-colorscheme molokai
+"colorscheme default
+colorscheme default256
 
 " fzf
 set rtp+=~/.fzf
