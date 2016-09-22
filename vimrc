@@ -17,6 +17,9 @@ set tabstop=2
 
 set showtabline=2
 
+set splitbelow
+set splitright
+
 set cm=blowfish
 
 autocmd BufWritePre * :%s/\s\+$//e
