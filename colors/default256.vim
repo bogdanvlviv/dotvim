@@ -18,11 +18,11 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "default256"
-
 " vim: sw=2
 
 " default256
+
+let g:colors_name="default256"
 
 set t_Co=256
 
@@ -33,7 +33,7 @@ hi CursorColumn ctermfg=NONE ctermbg=236
 hi CursorLine ctermfg=NONE ctermbg=236
 hi LineNr ctermfg=15 ctermbg=234
 hi Number ctermfg=141 ctermbg=NONE
-hi Statement ctermfg=124 ctermbg=NONE
+hi Statement ctermfg=1 ctermbg=NONE
 hi String ctermfg=186 ctermbg=NONE
 hi Title ctermfg=231 ctermbg=NONE
 
