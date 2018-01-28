@@ -7,6 +7,9 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/typescript-vim"]
+	path = bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
 [submodule "bundle/vim-bundler"]
 	path = bundle/vim-bundler
 	url = https://github.com/tpope/vim-bundler.git
