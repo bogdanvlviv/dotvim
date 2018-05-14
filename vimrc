@@ -35,6 +35,7 @@ colorscheme default256
 
 " fzf
 set rtp+=~/.fzf
+command! F FZF
 
 " nerdtree
 let NERDTreeShowHidden=1
@@ -51,11 +52,12 @@ let g:syntastic_css_checkers=["stylelint"]
 let g:syntastic_javascript_checkers=["eslint"]
 let g:syntastic_ruby_checkers=["mri", "rubocop"]
 
-function FindSed(name, regexp)
+" commands
+function! FindSed(name, regexp)
   let find_sed = "find . -type f -name " . a:name . " -exec sed -i " . a:regexp . " {} \\;"
 
   echom "Executing: `" . find_sed . "`"
 
   echom system(find_sed)
 endfunction
-command FindSed call FindSed(<f-args>)
+command! FindSed call FindSed(<f-args>)
