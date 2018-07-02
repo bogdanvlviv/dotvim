@@ -63,10 +63,10 @@ endfunction
 command! FindSed call FindSed(<f-args>)
 
 function! RemoveSwapFiles()
-  let find_rm = "find . -type f -name '.*.sw*' | xargs rm"
+  let find_delete = "find . -type f -name '.*.sw*' -delete"
 
-  echom "Executing: `" . find_rm . "`"
+  echom "Executing: `" . find_delete . "`"
 
-  echom system(find_rm)
+  echom system(find_delete)
 endfunction
 command! RemoveSwapFiles call RemoveSwapFiles(<f-args>)
