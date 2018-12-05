@@ -27,7 +27,7 @@ set cm=blowfish
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Ack (the_silver_searcher / ag)
-let g:ackprg="ag --hidden --ignore-dir .git"
+let g:ackprg="ag --hidden"
 
 " colors
 "colorscheme default
