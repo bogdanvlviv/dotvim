@@ -53,6 +53,24 @@ let g:syntastic_javascript_checkers=["eslint"]
 let g:syntastic_ruby_checkers=["mri", "rubocop"]
 
 " commands
+function! Ctags()
+  let ctags = "ctags --recurse"
+
+  echom "Executing: `" . ctags . "`"
+
+  echom system(ctags)
+endfunction
+command! Ctags call Ctags(<f-args>)
+
+function! CtagsGems()
+  let ctags_gems = "ctags --recurse $(bundle list --paths)"
+
+  echom "Executing: `" . ctags_gems . "`"
+
+  echom system(ctags_gems)
+endfunction
+command! CtagsGems call CtagsGems(<f-args>)
+
 function! FindSed(name, regexp)
   let find_sed = "find . -type f -name " . a:name . " -exec sed -i " . a:regexp . " {} \\;"
 
