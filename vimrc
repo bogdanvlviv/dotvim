@@ -88,3 +88,13 @@ function! RemoveSwapFiles()
   echom system(find_delete)
 endfunction
 command! RemoveSwapFiles call RemoveSwapFiles(<f-args>)
+
+function! SetDefaultKeymap()
+  set keymap=""
+endfunction
+command! SetDefaultKeymap call SetDefaultKeymap(<f-args>)
+
+function! SetUkrainianKeymap()
+  set keymap=ukrainian-jcuken
+endfunction
+command! SetUkrainianKeymap call SetUkrainianKeymap(<f-args>)
