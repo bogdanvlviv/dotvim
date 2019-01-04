@@ -52,6 +52,9 @@ let g:syntastic_css_checkers=["stylelint"]
 let g:syntastic_javascript_checkers=["eslint"]
 let g:syntastic_ruby_checkers=["mri", "rubocop"]
 
+" vim-test
+let test#strategy="vimterminal"
+
 " <Leader>: '\'
 let mapleader='\'
 map <Leader>byebug orequire "byebug"; byebug<Esc>
