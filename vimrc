@@ -58,6 +58,8 @@ let test#strategy="vimterminal"
 " <Leader>: '\'
 let mapleader='\'
 map <Leader>byebug orequire "byebug"; byebug<Esc>
+map <Leader>tn :tabnew<Esc>
+map <Leader>to :tabonly<Esc>
 
 " commands
 function! Ctags()
