@@ -28,9 +28,6 @@
 [submodule "bundle/vim-jsx"]
 	path = bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
-[submodule "bundle/vim-open-github"]
-	path = bundle/vim-open-github
-	url = https://github.com/tonchis/vim-to-github.git
 [submodule "bundle/vim-pathogen"]
 	path = bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
