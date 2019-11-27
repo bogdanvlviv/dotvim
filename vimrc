@@ -62,6 +62,13 @@ map <Leader>pry orequire "pry"; binding.pry<Esc>
 map <Leader>tn :tabnew<Esc>
 map <Leader>to :tabonly<Esc>
 
+" resize current window
+map < <C-w>4<
+map > <C-w>4>
+map + <C-w>4+
+map - <C-w>4-
+map _ <C-w>4-
+
 " commands
 function! Ctags()
   let ctags = "ctags --recurse"
