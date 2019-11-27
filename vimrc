@@ -61,6 +61,7 @@ map <Leader>byebug orequire "byebug"; byebug<Esc>
 map <Leader>pry orequire "pry"; binding.pry<Esc>
 map <Leader>tn :tabnew<Esc>
 map <Leader>to :tabonly<Esc>
+map <Leader>qa :qa<Esc>
 
 " resize current window
 map < <C-w>4<
