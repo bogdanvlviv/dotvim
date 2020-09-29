@@ -69,7 +69,6 @@ map < <C-w>4<
 map > <C-w>4>
 map + <C-w>4+
 map - <C-w>4-
-map _ <C-w>4-
 
 " commands
 function! Ctags()
