@@ -59,10 +59,7 @@ let test#strategy="vimterminal"
 
 " <Leader>: '\'
 let mapleader='\'
-map <Leader>byebug orequire "byebug"; byebug<Esc>
 map <Leader>debug orequire "debug"; binding.break<Esc>
-map <Leader>pry orequire "pry"; binding.pry<Esc>
-map <Leader>irb orequire "break"; binding.irb<Esc>
 map <Leader>tn :tabnew<Esc>
 map <Leader>to :tabonly<Esc>
 map <Leader>qa :qa<Esc>
