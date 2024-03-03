@@ -29,7 +29,9 @@ set cm=blowfish
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Ack (the_silver_searcher / ag)
-let g:ackprg="ag --hidden"
+if executable("ag")
+  let g:ackprg="ag --hidden"
+endif
 
 " colors
 "colorscheme default
@@ -44,21 +46,8 @@ let NERDTreeShowHidden=1
 let NERDTreeWinSize=50
 map <C-\> :NERDTreeToggle<CR>
 
-" syntastic
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=2
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-let g:syntastic_loc_list_height=3
-let g:syntastic_ruby_checkers=["mri", "rubocop"]
-
-" vim-test
-let test#strategy="vimterminal"
-
 " <Leader>: '\'
 let mapleader='\'
-map <Leader>debug orequire "debug"; binding.break<Esc>
-map <Leader>pry orequire "pry"; binding.pry<Esc>
 map <Leader>tn :tabnew<Esc>
 map <Leader>to :tabonly<Esc>
 map <Leader>qa :qa<Esc>
