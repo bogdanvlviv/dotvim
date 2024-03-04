@@ -33,6 +33,9 @@ if executable("ag")
   let g:ackprg="ag --hidden"
 endif
 
+" ale
+let g:ale_virtualtext_cursor="disabled"
+
 " colors
 "colorscheme default
 colorscheme default256
