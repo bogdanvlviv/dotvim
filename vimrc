@@ -28,7 +28,7 @@ set cm=blowfish
 
 autocmd BufWritePre * :%s/\s\+$//e
 
-" Ack (the_silver_searcher / ag)
+" ack
 if executable("ag")
   let g:ackprg="ag --hidden"
 endif
@@ -37,7 +37,6 @@ endif
 let g:ale_virtualtext_cursor="disabled"
 
 " colors
-"colorscheme default
 colorscheme default256
 
 " fzf
@@ -55,7 +54,7 @@ map <Leader>tn :tabnew<Esc>
 map <Leader>to :tabonly<Esc>
 map <Leader>qa :qa<Esc>
 
-" resize current window
+" resize the current window
 map < <C-w>4<
 map > <C-w>4>
 map + <C-w>4+
@@ -65,7 +64,7 @@ map - <C-w>4-
 function! Ctags()
   let ctags = "ctags --recurse"
 
-  echom "Executing: `" . ctags . "`"
+  echom ctags
 
   echom system(ctags)
 endfunction
@@ -74,7 +73,7 @@ command! Ctags call Ctags(<f-args>)
 function! CtagsGems()
   let ctags_gems = "ctags --recurse $(bundle list --paths)"
 
-  echom "Executing: `" . ctags_gems . "`"
+  echom ctags_gems
 
   echom system(ctags_gems)
 endfunction
@@ -83,7 +82,7 @@ command! CtagsGems call CtagsGems(<f-args>)
 function! FindSed(name, regexp)
   let find_sed = "find . -type f -name " . a:name . " -exec sed -i " . a:regexp . " {} \\;"
 
-  echom "Executing: `" . find_sed . "`"
+  echom find_sed
 
   echom system(find_sed)
 endfunction
@@ -92,7 +91,7 @@ command! FindSed call FindSed(<f-args>)
 function! RemoveSwapFiles()
   let find_delete = "find . -type f -name '.*.sw*' -delete"
 
-  echom "Executing: `" . find_delete . "`"
+  echom find_delete
 
   echom system(find_delete)
 endfunction

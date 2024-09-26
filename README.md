@@ -1,7 +1,9 @@
 # dotvim
-My .vim directory.
 
-## Using
+.vim directory.
+
+## Download
+
 ```bash
 $ git clone https://gitlab.com/bogdanvlviv/dotvim.git ~/.vim
 $ cd ~/.vim
