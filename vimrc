@@ -37,7 +37,7 @@ endif
 let g:ale_virtualtext_cursor="disabled"
 
 " colors
-colorscheme default256
+colorscheme 256
 
 " fzf
 set rtp+=~/.fzf
