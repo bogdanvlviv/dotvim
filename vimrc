@@ -24,7 +24,7 @@ set showtabline=2
 set splitbelow
 set splitright
 
-set cm=blowfish
+set cryptmethod=blowfish2
 
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -44,15 +44,15 @@ set rtp+=~/.fzf
 command! F FZF
 
 " nerdtree
-let NERDTreeShowHidden=1
-let NERDTreeWinSize=50
+let g:NERDTreeShowHidden=1
+let g:NERDTreeWinSize=50
 map <C-\> :NERDTreeToggle<CR>
 
 " <Leader>: '\'
-let mapleader='\'
-map <Leader>tn :tabnew<Esc>
-map <Leader>to :tabonly<Esc>
-map <Leader>qa :qa<Esc>
+let g:mapleader='\'
+map <Leader>tn :tabnew<CR>
+map <Leader>to :tabonly<CR>
+map <Leader>qa :qa<CR>
 
 " resize the current window
 map < <C-w>4<
@@ -64,36 +64,36 @@ map - <C-w>4-
 function! Ctags()
   let ctags = "ctags --recurse"
 
-  echom ctags
+  echomsg ctags
 
-  echom system(ctags)
+  echomsg system(ctags)
 endfunction
 command! Ctags call Ctags(<f-args>)
 
 function! CtagsGems()
   let ctags_gems = "ctags --recurse $(bundle list --paths)"
 
-  echom ctags_gems
+  echomsg ctags_gems
 
-  echom system(ctags_gems)
+  echomsg system(ctags_gems)
 endfunction
 command! CtagsGems call CtagsGems(<f-args>)
 
 function! FindSed(name, regexp)
-  let find_sed = "find . -type f -name " . a:name . " -exec sed -i " . a:regexp . " {} \\;"
+  let find_sed = "find . -type f -name " . a:name . " -exec sed -i " . a:regexp . " '{}' \\;"
 
-  echom find_sed
+  echomsg find_sed
 
-  echom system(find_sed)
+  echomsg system(find_sed)
 endfunction
 command! FindSed call FindSed(<f-args>)
 
 function! RemoveSwapFiles()
-  let find_delete = "find . -type f -name '.*.sw*' -delete"
+  let find_delete = "find . -type f -name '*.sw[nop]' -delete"
 
-  echom find_delete
+  echomsg find_delete
 
-  echom system(find_delete)
+  echomsg system(find_delete)
 endfunction
 command! RemoveSwapFiles call RemoveSwapFiles(<f-args>)
 
